@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка возраста</title>
+</head>
+<body>
+    <h1>Проверка возраста пользователя</h1>
+    <p>Откройте консоль браузера (F12), чтобы увидеть возможные сообщения</p>
+
+    <script>
+        // Вставьте сюда код из артефакта
+        const userName = prompt("Введите ваше имя:");
+        const userAge = parseInt(prompt("Введите ваш возраст:"));
+
+        if (userAge < 18) {
+            alert("You are not allowed to visit this website");
+        } else if (userAge >= 18 && userAge <= 22) {
+            const userConfirmed = confirm("Are you sure you want to continue?");
+            
+            if (userConfirmed) {
+                alert(`Welcome, ${userName}`);
+            } else {
+                alert("You are not allowed to visit this website");
+            }
+        } else {
+            alert(`Welcome, ${userName}`);
+        }
+    </script>
+</body>
+</html>
